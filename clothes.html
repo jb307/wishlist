@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="clothes.css">
+    <title> clothes List </title>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Jisel R Ruiz.png" alt="Website Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="purse.html">Purses</a></li>
+                    <li><a href="clothes.html">Clothes</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Random</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="filter">
+        <label>
+            Sort by Price:
+            <select id="priceFilter" onchange="sortPurses()">
+                <option value="reset">Reset</option>
+                <option value="lowToHigh">Low to High</option>
+                <option value="highToLow">High to Low</option>
+                
+            </select>
+        </label>
+    
+    
+    
+    <label>
+        Sort by Want:
+        <button onclick="filterMostToLeastWanted()">Most wanted filter </button>
+    </label>
+    
+    </div>
+    
+    <table id="purseTable" cellspacing="10" cellpadding="40" width="300">
+        <thead>
+            <tr> 
+                <th> Picture </th>
+                <th> Link </th>
+                <th>Price</th> 
+                <th>Notes </th>
+            </tr>
+        </thead>
+    
+    
+        <tbody>
+       <tr> 
+          <td><img src="Image.png" width="300" height="300"> </td> 
+          <td> <a href="https://eng.polene-paris.com/products/numero-dix-monochrome-camel-graine" target="_blank"> Polene </a> </td>
+          <td> $460</td>
+          <td> Color: Camel  </td>
+      </tr>
+
+      <tr> 
+        <td><img src="Image 2.png" width="300" height="300"> </td> 
+        <td> <a href="https://www.portlandleathergoods.com/products/almost-perfect-baguette-shoulder-bag?variant=40372363264082" target="_blank"> Black Purse </a> </td>
+        <td> $78</td>
+        <td> Color: Black</td>
+    </tr>
+
+
+    </tbody>
+</table>
+  <script src="clothes.js"></script>
+
+</body>
+</html>
