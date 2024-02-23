@@ -5,43 +5,46 @@ body {
 }
 
 main {
-    padding: 50px; /* Add padding to the main content */
+    padding: 20px; /* Add padding to the main content */
 }
 
 header {
     background-color: #fbfbfb;
     color: #f8e5f7;
-    padding: 20px 0;
+    padding: 15px 0; /* Reduce padding for smaller screens */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 90%; /* Adjust max-width for better responsiveness */
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
     justify-content: space-between;
     align-items: center;
 }
 
 .logo img {
-    height: 280px;
+    height: auto; /* Allow the logo to adjust its height */
+    max-width: 100%; /* Make sure the logo does not overflow */
 }
 
 nav {
-    text-align: center; /* Center align the content within the nav */
+    text-align: center;
+    width: 100%; /* Ensure the nav takes up the full width */
+    margin-top: 15px; /* Add margin for separation */
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
-    justify-content: center; /* Center align the ul */
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav ul li a {
@@ -53,4 +56,52 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #f312b0;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 10px; /* Further reduce padding for smaller screens */
+    }
+
+    .container {
+        flex-direction: column; /* Stack items vertically for smaller screens */
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px; /* Reduce margin for smaller screens */
+    }
+
+    nav ul li {
+        margin-right: 0; /* Remove margin between nav items */
+        margin-bottom: 5px; /* Add margin below nav items */
+    }
+}
+
+/* Table Styles */
+#homeTable, #purseTable {
+    width: 100%; /* Table takes up 100% width */
+    border-collapse: collapse;
+    margin: 0 auto; /* Center-align the table within its container */
+}
+
+#homeTable th, #homeTable td, #purseTable th, #purseTable td {
+    padding: 100px;
+    border: 1px solid #ddd; /* Add border to table cells */
+}
+
+#homeTable th, #purseTable th {
+    background-color: rgb(242, 242, 242); /* Light gray background for table headers */
+}
+
+#homeTable img, #purseTable img {
+    max-width: 100%; /* Ensure images fit within table cell */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Centering sort and filter */
+.filter {
+    text-align: center;
+    margin-top: 20px;
 }
