@@ -1,78 +1,58 @@
-/**const purses = [
-    { name: "Polene", imageUrl: "ppics/Image.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-camel-graine", price: 460, notes: "Color: Camel", wantedness: 6 , order:1},
-    { name: "Black Purse", imageUrl: "ppics/Image2.png", url: "https://www.portlandleathergoods.com/products/almost-perfect-baguette-shoulder-bag?variant=40372363264082", price: 78, notes: "Color: Black", wantedness: 7, order:2 },
-    { name: "Polene", imageUrl: "ppics/Image 3.png", url: "https://eng.polene-paris.com/products/numero-douze-taupe-graine", price: 430, notes: "Color: Taupe", wantedness: 8, order:3 },
-    { name: "Polene", imageUrl: "ppics/Image 4.png", url: "https://eng.polene-paris.com/products/tonca-laurier-graine", price: 450, notes: "Color: Laurier", wantedness: 5, order:4 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 5.png", url: "https://frejanyc.com/products/caroline-bag-oat", price: 258, notes: "Color: Camel", wantedness: 4, order:5 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 6.png", url: "https://frejanyc.com/products/caroline-bag-pecan", price: 258, notes: "Color: Black", wantedness: 11, order:6 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 7.png", url: "https://frejanyc.com/products/mini-shoulder-bag", price: 248, notes: "Color: Oat", wantedness: 10, order:7 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 8.png", url: "https://frejanyc.com/products/roma-bag-oat", price: 248, notes: "Color: Oat", wantedness: 13, order:8 },
-    { name: "Polene", imageUrl: "ppics/Image 9.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-noir-graine", price: 460, notes: "Color: Nior", wantedness: 9, order:9 },
-    { name: "Polene", imageUrl: "ppics/Image 10.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-taupe-graine", price: 460, notes: "Color: Taupe", wantedness: 3, order:10 },
-    { name: "Teddy Blake", imageUrl: "ppics/Image 11.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-dark-green", price: 450, notes: "Color: Dark Green", wantedness: 2, order:11},
-    { name: "Teddy Blake", imageUrl: "ppics/Image 12.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-orange", price: 425, notes: "Color: Orange", wantedness: 1, order:12 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 13.png", url: "https://frejanyc.com/products/mini-shoulder-bag-taupe", price: 248, notes: "Color: Camel", wantedness: 14, order:13 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 14.png", url: "https://frejanyc.com/products/mini-shoulder-bag-black", price: 248, notes: "Color: Black", wantedness: 12, order:14 },
+const clothes = [
+    { name: "Shawl Merino Wool Jacket", imageUrl: "cpics/Image1.png", url: "https://www.aritzia.com/us/en/product/shawl-merino-wool-jacket/101945.html?dwvar_101945_color=10250&dwvar_101945_size=3", price: 248, notes: "Color: Heather Bone", wantedness: 4, order:1},
+    { name: "Shirt", imageUrl: "cpics/Image3.png", url: "https://www.aritzia.com/us/en/product/contour-one-shoulder-top/118149.html?dwvar_118149_color=1274", price:40  , notes: "Color: Black", wantedness: 3, order:2 },
+    { name: "Shirt", imageUrl: "cpics/Image2.png", url: "https://www.aritzia.com/us/en/product/contour-one-shoulder-top/118149.html?dwvar_118149_color=1275", price: 40, notes: "Color: White", wantedness: 2, order:3 },
+    { name: " Sweat Pants", imageUrl: "cpics/Image4.png", url: " https://www.aritzia.com/us/en/product/cozy-fleece-mega-cargo™-sweatpant/116230.html?dwvar_116230_color=4425", price: 85, notes: "Color: Med, Color: Heather Chrome  ", wantedness: 6, order:5 },
+    { name: "Sweat Shirt ", imageUrl: "cpics/Image5.png", url: "https://www.aritzia.com/us/en/product/cozy-fleece-perfect-zip-hoodie/116269.html?dwvar_116269_color=4425 ", price: 85, notes: "Color: Med, Color: Heather Chrome  ", wantedness: 5, order:4 },
+    { name: "pijamas ", imageUrl: "cpics/Image6.png", url: "https://skims.com/products/soft-lounge-sleep-set-marble ", price: 120, notes: "Color: Marble ", wantedness: 4, order:6 },
+    { name: " Apron", imageUrl: "cpics/Image7.png", url: "https://whitebarkworkwear.com/collections/hemp-aprons/products/hemp-natural-full-cross-back-apron ", price: 110, notes: "Color:whit w/ red stiching you can also add my name but thats only if u wanna be nice..  ", wantedness: 7, order:7 },
+   // { name: " ", imageUrl: "cpics/Image4.png", url: " ", price: , notes: " ", wantedness: 3, order:4 },
 ];
 
-
-function populatePurseTable() {
-    const table = document.getElementById("purseTable");
+function populateClothesTable() {
+    const table = document.getElementById("clothesTable");
     const tbody = table.getElementsByTagName("tbody")[0];
     tbody.innerHTML = "";
 
-    purses.forEach(purse => {
+    clothes.forEach(item => {
         const row = tbody.insertRow();
         const imgCell = row.insertCell(0);
         const linkCell = row.insertCell(1);
         const priceCell = row.insertCell(2);
         const notesCell = row.insertCell(3);
 
-        imgCell.innerHTML = `<img src="${purse.imageUrl}" width="300" height="300">`;
-        linkCell.innerHTML = `<a href="${purse.url}" target="_blank">${purse.name}</a>`;
-        priceCell.textContent = `$${purse.price}`;
-        notesCell.textContent = purse.notes;
+        imgCell.innerHTML = `<img src="${item.imageUrl}" width="300" height="300">`;
+        linkCell.innerHTML = `<a href="${item.url}" target="_blank">${item.name}</a>`;
+        priceCell.textContent = `$${item.price}`;
+        notesCell.textContent = item.notes;
     });
 }
 
-function sortPurses() {
+function sortClothes() {
     const priceFilter = document.getElementById("priceFilter").value;
     if (priceFilter === "lowToHigh") {
-        purses.sort((a, b) => a.price - b.price);
+        clothes.sort((a, b) => a.price - b.price);
     } else if (priceFilter === "highToLow") {
-        purses.sort((a, b) => b.price - a.price);
+        clothes.sort((a, b) => b.price - a.price);
     } else if (priceFilter === "reset") {
         // Reset to default list
-        purses.sort((a, b) => a.order - b.order);
+        clothes.sort((a, b) => a.order - b.order);
     }
-    populatePurseTable();
+    populateClothesTable();
 }
 
 function clearFilters() {
     // Reset price filter
     document.getElementById("priceFilter").selectedIndex = 0;
 
-    // Re-populate the purse table with the original data
-    populatePurseTable();
+    // Re-populate the clothes table with the original data
+    populateClothesTable();
 }
 
-/*function sortPurses() {
-    const priceFilter = document.getElementById("priceFilter").value;
-    if (priceFilter === "lowToHigh") {
-        purses.sort((a, b) => a.price - b.price);
-    } else if (priceFilter === "highToLow") {
-        purses.sort((a, b) => b.price - a.price);
-    }
-    populatePurseTable();
-}
-*/
-/*function filterMostToLeastWanted() {
-    purses.sort((a, b) => b.wantedness - a.wantedness);
-    populatePurseTable();
+function filterMostToLeastWanted() {
+    clothes.sort((a, b) => b.wantedness - a.wantedness);
+    populateClothesTable();
 }
 
-
-// Initial population of purse table
-populatePurseTable();
-
-**/
+// Initial population of clothes table
+populateClothesTable();

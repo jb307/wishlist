@@ -13,6 +13,7 @@ const purses = [
     { name: "Teddy Blake", imageUrl: "ppics/Image 12.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-orange", price: 425, notes: "Color: Orange", wantedness: 1, order:12 },
     { name: "Frejanyc", imageUrl: "ppics/Image 13.png", url: "https://frejanyc.com/products/mini-shoulder-bag-taupe", price: 248, notes: "Color: Camel", wantedness: 14, order:13 },
     { name: "Frejanyc", imageUrl: "ppics/Image 14.png", url: "https://frejanyc.com/products/mini-shoulder-bag-black", price: 248, notes: "Color: Black", wantedness: 12, order:14 },
+     // { name: " ", imageUrl: "hpics/Image4.png", url: " ", price: , notes: " ", wantedness: 3, order:4 },
 ];
 
 

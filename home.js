@@ -1,78 +1,54 @@
-/**const purses = [
-    { name: "Polene", imageUrl: "ppics/Image.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-camel-graine", price: 460, notes: "Color: Camel", wantedness: 6 , order:1},
-    { name: "Black Purse", imageUrl: "ppics/Image2.png", url: "https://www.portlandleathergoods.com/products/almost-perfect-baguette-shoulder-bag?variant=40372363264082", price: 78, notes: "Color: Black", wantedness: 7, order:2 },
-    { name: "Polene", imageUrl: "ppics/Image 3.png", url: "https://eng.polene-paris.com/products/numero-douze-taupe-graine", price: 430, notes: "Color: Taupe", wantedness: 8, order:3 },
-    { name: "Polene", imageUrl: "ppics/Image 4.png", url: "https://eng.polene-paris.com/products/tonca-laurier-graine", price: 450, notes: "Color: Laurier", wantedness: 5, order:4 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 5.png", url: "https://frejanyc.com/products/caroline-bag-oat", price: 258, notes: "Color: Camel", wantedness: 4, order:5 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 6.png", url: "https://frejanyc.com/products/caroline-bag-pecan", price: 258, notes: "Color: Black", wantedness: 11, order:6 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 7.png", url: "https://frejanyc.com/products/mini-shoulder-bag", price: 248, notes: "Color: Oat", wantedness: 10, order:7 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 8.png", url: "https://frejanyc.com/products/roma-bag-oat", price: 248, notes: "Color: Oat", wantedness: 13, order:8 },
-    { name: "Polene", imageUrl: "ppics/Image 9.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-noir-graine", price: 460, notes: "Color: Nior", wantedness: 9, order:9 },
-    { name: "Polene", imageUrl: "ppics/Image 10.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-taupe-graine", price: 460, notes: "Color: Taupe", wantedness: 3, order:10 },
-    { name: "Teddy Blake", imageUrl: "ppics/Image 11.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-dark-green", price: 450, notes: "Color: Dark Green", wantedness: 2, order:11},
-    { name: "Teddy Blake", imageUrl: "ppics/Image 12.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-orange", price: 425, notes: "Color: Orange", wantedness: 1, order:12 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 13.png", url: "https://frejanyc.com/products/mini-shoulder-bag-taupe", price: 248, notes: "Color: Camel", wantedness: 14, order:13 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 14.png", url: "https://frejanyc.com/products/mini-shoulder-bag-black", price: 248, notes: "Color: Black", wantedness: 12, order:14 },
+const home = [
+    { name: "D5 Stainless Brushed 5-ply Bonded Cookware Set, 14 piece Set", imageUrl: "hpics/Image1.png", url: "https://www.all-clad.com/d5-stainless-brushed-5-ply-bonded-cookware-set-14-piece-set.html", price: 1499.99, notes: "These will last forever people still have their all clads from 20+ years ago", wantedness: 4, order:1},
+    { name: "Sourdough Kit", imageUrl: "hpics/Image2.png", url: "https://www.amazon.com/Kootek-Sourdough-Supplies-Banneton-Proofing/dp/B0CB6FPNRQ/ref=sr_1_5?crid=1ORMINFLEPBKQ&dib=eyJ2IjoiMSJ9.51nLJlskuGbBplbjXehVYzpl8yVtC7c9DJgeOnwj3vvcPunGDcsthrYIuLjBZ7crHWYf2fmXlzfu61Bz5CzssM-ZBpKP4ZHk9EF6iSBsuMJO-hmOgrHuC2WlGspCtrlptMbffV5AP0BLoOp2kBBcohWa-KdSs9sB3cv1x3PlmWiVWsz_RSL6ZuBXxUSA5AJxd5NY_ZuRgJhr82N77MgCRcwIeVSpQ2KoPyqGkqrgDoEN9Qf9g5XjaFXaKfFiBrxc90mH76uTqDV2TrVQ5ydYjddPr1E_HDZmDVJMbepj1LA.Vdc7r7qPb0qag-U1C9QXkrIMMmO5qH4JEY2T2XbUShM&dib_tag=se&keywords=sourdough%2Bkit&qid=1708671972&s=home-garden&sprefix=sourdough%2Bki%2Cgarden%2C181&sr=1-5&th=1", price: 29.99 , notes: "for fresh sourdough", wantedness: 1, order:2 },
+    { name: "Chef Knifes", imageUrl: "hpics/Image3.png", url: "https://www.zwilling.com/us/miyabi-birchwood-sg2-7-pc-knife-block-set-brown-34370-007/34370-007-0.html?cgid=our-brands_miyabi_cutlery", price: 1299, notes: "Just like the pans these are QUALITY (btw you can get a discount just lmk)", wantedness: 2, order:3 },
+    { name: "5-Qt Tilt Head Stand Mixer", imageUrl: "hpics/Image4.png", url: "https://www.crateandbarrel.com/kitchenaid-artisan-series-matte-milkshake-5-quart-tilt-head-stand-mixer/s459206%22", price: 375, notes: "COLOR:Milkshake", wantedness: 3, order:4 },
 ];
 
-
-function populatePurseTable() {
-    const table = document.getElementById("purseTable");
+function populateHomeTable() {
+    const table = document.getElementById("homeTable");
     const tbody = table.getElementsByTagName("tbody")[0];
     tbody.innerHTML = "";
 
-    purses.forEach(purse => {
+    home.forEach(home => {
         const row = tbody.insertRow();
         const imgCell = row.insertCell(0);
         const linkCell = row.insertCell(1);
         const priceCell = row.insertCell(2);
         const notesCell = row.insertCell(3);
 
-        imgCell.innerHTML = `<img src="${purse.imageUrl}" width="300" height="300">`;
-        linkCell.innerHTML = `<a href="${purse.url}" target="_blank">${purse.name}</a>`;
-        priceCell.textContent = `$${purse.price}`;
-        notesCell.textContent = purse.notes;
+        imgCell.innerHTML = `<img src="${home.imageUrl}" width="300" height="300">`;
+        linkCell.innerHTML = `<a href="${home.url}" target="_blank">${home.name}</a>`;
+        priceCell.textContent = `$${home.price}`;
+        notesCell.textContent = home.notes;
     });
 }
 
-function sortPurses() {
+function sortHome() {
     const priceFilter = document.getElementById("priceFilter").value;
     if (priceFilter === "lowToHigh") {
-        purses.sort((a, b) => a.price - b.price);
+        home.sort((a, b) => a.price - b.price);
     } else if (priceFilter === "highToLow") {
-        purses.sort((a, b) => b.price - a.price);
+        home.sort((a, b) => b.price - a.price);
     } else if (priceFilter === "reset") {
         // Reset to default list
-        purses.sort((a, b) => a.order - b.order);
+        home.sort((a, b) => a.order - b.order);
     }
-    populatePurseTable();
+    populateHomeTable();
 }
 
 function clearFilters() {
     // Reset price filter
     document.getElementById("priceFilter").selectedIndex = 0;
 
-    // Re-populate the purse table with the original data
-    populatePurseTable();
+    // Re-populate the home table with the original data
+    populateHomeTable();
 }
 
-/*function sortPurses() {
-    const priceFilter = document.getElementById("priceFilter").value;
-    if (priceFilter === "lowToHigh") {
-        purses.sort((a, b) => a.price - b.price);
-    } else if (priceFilter === "highToLow") {
-        purses.sort((a, b) => b.price - a.price);
-    }
-    populatePurseTable();
-}
-*/
-/*function filterMostToLeastWanted() {
-    purses.sort((a, b) => b.wantedness - a.wantedness);
-    populatePurseTable();
+function filterMostToLeastWanted() {
+    home.sort((a, b) => b.wantedness - a.wantedness);
+    populateHomeTable();
 }
 
-
-// Initial population of purse table
-populatePurseTable();
-
-**/
+// Initial population of home table
+populateHomeTable();
