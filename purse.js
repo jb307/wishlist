@@ -9,10 +9,10 @@ const purses = [
     { name: "Frejanyc", imageUrl: "ppics/Image 8.png", url: "https://frejanyc.com/products/roma-bag-oat", price: 248, notes: "Color: Oat", wantedness: 13, order:8 },
     { name: "Polene", imageUrl: "ppics/Image 9.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-noir-graine", price: 460, notes: "Color: Nior", wantedness: 9, order:9 },
     { name: "Polene", imageUrl: "ppics/Image 10.png", url: "https://eng.polene-paris.com/products/numero-dix-monochrome-taupe-graine", price: 460, notes: "Color: Taupe", wantedness: 3, order:10 },
-    { name: "Teddy Blake", imageUrl: "ppics/Image 11.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-dark-green", price: 450, notes: "Color: Dark Green", wantedness: 2, order:11},
-    { name: "Teddy Blake", imageUrl: "ppics/Image 12.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-orange", price: 425, notes: "Color: Orange", wantedness: 1, order:12 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 13.png", url: "https://frejanyc.com/products/mini-shoulder-bag-taupe", price: 248, notes: "Color: Camel", wantedness: 14, order:13 },
-    { name: "Frejanyc", imageUrl: "ppics/Image 14.png", url: "https://frejanyc.com/products/mini-shoulder-bag-black", price: 248, notes: "Color: Black", wantedness: 12, order:14 },
+    //{ name: "Teddy Blake", imageUrl: "ppics/Image 11.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-dark-green", price: 450, notes: "Color: Dark Green", wantedness: 2, order:11},
+    //{ name: "Teddy Blake", imageUrl: "ppics/Image 12.png", url: "https://www.teddyblake.com/products/kim-stampatto-9-orange", price: 425, notes: "Color: Orange", wantedness: 1, order:12 },
+    { name: "Frejanyc", imageUrl: "ppics/Image 13.png", url: "https://frejanyc.com/products/mini-shoulder-bag-taupe", price: 248, notes: "Color: Camel", wantedness: 14, order:11 },
+    { name: "Frejanyc", imageUrl: "ppics/Image 14.png", url: "https://frejanyc.com/products/mini-shoulder-bag-black", price: 248, notes: "Color: Black", wantedness: 12, order:12 },
      // { name: " ", imageUrl: "hpics/Image4.png", url: " ", price: , notes: " ", wantedness: 3, order:4 },
 ];
 
